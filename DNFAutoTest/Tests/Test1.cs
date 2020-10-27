@@ -9,13 +9,19 @@
     [TestClass]
     public class Test1 : Base
     {
-        private readonly string url = "https://dotnetfiddle.net/";
-
+        string fileName = "../../ExcelData/Credentials.xlsx";
+        private string url = null;
+        
         // select which browser selenium will use
         // default set to chrome
         public void OpenBrowser(BrowserType browserType = BrowserType.Chrome)
         {
             LogHelpers.CreateLogFile();
+            ExcelHelpers.PopulateInCollection(fileName);
+            
+            // reads in URL from the .xslx file in ExcelData folder
+            url = ExcelHelpers.ReadData(1, "URL");
+
             switch (browserType)
             {
                 case BrowserType.Chrome:
@@ -27,17 +33,15 @@
         [TestMethod]
         public void ClickRun()
         {
-            // Open the Browser
             this.OpenBrowser();
-            LogHelpers.Write("Running Test 1...");
+            LogHelpers.Write("Running Hello World Test...");
             DriverContext.Browser.GoToUrl(this.url);
             
             this.CurrentPage = this.GetInstance<DNFHomepage>();
             this.CurrentPage.As<DNFHomepage>().ClickRun();
             
-            
             DriverContext.Driver.Close();
-            LogHelpers.Write("Closed the Chrome browser");
+            LogHelpers.Write("Closed The Chrome Browser");
             LogHelpers.Write("SUCCESS");
             LogHelpers.Write("!!!!!!!!!!~~~~~END OF LOGFILE~~~~~!!!!!!!!!!");
         }
