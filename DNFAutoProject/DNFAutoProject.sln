@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30611.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DNFAutoFramework", "DNFAutoFramework.csproj", "{43A2260D-E461-4101-8E84-566EC57CCBF0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DNFAutoTest", "..\DNFAutoTest\DNFAutoTest.csproj", "{0B53B55C-3692-41E1-BC9E-5CF8BF62B7A8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{901B6722-5F81-480B-8B4A-11934CA39439}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{43A2260D-E461-4101-8E84-566EC57CCBF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43A2260D-E461-4101-8E84-566EC57CCBF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43A2260D-E461-4101-8E84-566EC57CCBF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43A2260D-E461-4101-8E84-566EC57CCBF0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B53B55C-3692-41E1-BC9E-5CF8BF62B7A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B53B55C-3692-41E1-BC9E-5CF8BF62B7A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B53B55C-3692-41E1-BC9E-5CF8BF62B7A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B53B55C-3692-41E1-BC9E-5CF8BF62B7A8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F0C47898-7BF4-43DB-A8B6-8A5CA66FD12C}
+	EndGlobalSection
+EndGlobal
