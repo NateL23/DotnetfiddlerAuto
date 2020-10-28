@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DNFAutoFramework.Config
+﻿namespace DNFAutoFramework.Config
 {
-    class ConfigReader
+    using System.Configuration;
+    public class ConfigReader
     {
+        public static string InitializeTest()
+        {
+            return ConfigurationManager.AppSettings["XLSXFILE"].ToString();
+        }
     }
 }

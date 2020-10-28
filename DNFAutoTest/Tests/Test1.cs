@@ -1,6 +1,7 @@
 ﻿namespace DNFAutoTest
 {
     using DNFAutoFramework.Base;
+    using DNFAutoFramework.Config;
     using DNFAutoFramework.Helpers;
     using DNFAutoTest.Pages;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -9,8 +10,10 @@
     [TestClass]
     public class Test1 : Base
     {
-        string fileName = "../../ExcelData/Credentials.xlsx";
         private string url = null;
+        
+        // grabs the XLSX filename from the app.config
+        static string fileName = ConfigReader.InitializeTest();
         
         // select which browser selenium will use
         // default set to chrome
