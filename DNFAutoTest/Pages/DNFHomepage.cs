@@ -15,7 +15,6 @@
         [FindsBy(How = How.Id, Using = "output")]
         IWebElement outputElement { get; set; }
 
-
         // click the run button
         public void ClickRun()
         {
@@ -24,7 +23,7 @@
             this.runButton.Click();
         }
 
-        // assert for Test 1
+        // assert for test 1
         internal bool AssertHelloWorld()
         {
             if(!(outputElement.Text == "Hello World"))

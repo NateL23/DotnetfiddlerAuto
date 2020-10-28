@@ -62,6 +62,7 @@
     <Compile Include="Base\BasePage.cs" />
     <Compile Include="Base\Browser.cs" />
     <Compile Include="Base\DriverContext.cs" />
+    <Compile Include="Base\TestInitializeHook.cs" />
     <Compile Include="Config\ConfigReader.cs" />
     <Compile Include="Config\Settings.cs" />
     <Compile Include="Extensions\WebDriverExtensions.cs" />
