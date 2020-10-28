@@ -9,7 +9,7 @@
 
     public class ExcelHelpers
     {
-        private static List<DataCollection> _dataCol = new List<DataCollection>();
+        private static readonly List<DataCollection> _dataCol = new List<DataCollection>();
         
         public static void PopulateInCollection(string fileName)
         // iterate through rows and columns of excel table and store in DataTable
