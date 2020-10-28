@@ -7,7 +7,7 @@
     public class LogHelpers
     {
         // global declaration
-        private static string _logFileName = string.Format("DNFTestLog - {0:yyyy.mm.dd-hh.mm}", DateTime.Now);
+        private static readonly string _logFileName = string.Format("DNFTestLog - {0:yyyy.mm.dd-hh.mm}", DateTime.Now);
         private static StreamWriter _streamw = null;
         
         // create a file which stores log information

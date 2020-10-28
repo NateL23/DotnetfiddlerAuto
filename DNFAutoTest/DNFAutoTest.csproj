@@ -57,8 +57,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Pages\DNFHomepage.cs" />
-    <Compile Include="Tests\Test2.cs" />
-    <Compile Include="Tests\Test1.cs" />
+    <Compile Include="Tests\Test2.NameBasedTests.cs" />
+    <Compile Include="Tests\Test1.HelloWorld.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
