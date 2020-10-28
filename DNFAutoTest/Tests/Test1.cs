@@ -40,9 +40,16 @@
             LogHelpers.Write("Running Hello World Test...");
             DriverContext.Browser.GoToUrl(this.url);
             
+            // initialize the homepage, click run button
             this.CurrentPage = this.GetInstance<DNFHomepage>();
             this.CurrentPage.As<DNFHomepage>().ClickRun();
             
+            // assert output text (expected: Hello World)
+            if(this.CurrentPage.As<DNFHomepage>().AssertHelloWorld())
+            {
+                LogHelpers.Write("Test 1: Hello World - Passed!");
+            }
+
             DriverContext.Driver.Close();
             LogHelpers.Write("Closed The Chrome Browser");
             LogHelpers.Write("SUCCESS");
