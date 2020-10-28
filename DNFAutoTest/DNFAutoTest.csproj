@@ -56,7 +56,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="HookInitialize.cs" />
+    <Compile Include="HookInitialize.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
     <Compile Include="Pages\DNFHomepage.cs" />
     <Compile Include="Tests\Test2.NameBasedTests.cs" />
     <Compile Include="Tests\Test1.HelloWorld.cs" />
