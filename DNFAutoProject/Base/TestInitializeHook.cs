@@ -3,6 +3,7 @@
     using DNFAutoFramework.Config;
     using DNFAutoFramework.Helpers;
     using OpenQA.Selenium.Chrome;
+    using System;
 
     public abstract class TestInitializeHook : Base
     {
@@ -42,7 +43,14 @@
         public virtual void NavigateToSite()
         {
             // reads in URL from the .xslx file in ExcelData folder
-            url = ExcelHelpers.ReadData(1, "URL");
+           try
+            {
+                this.url = ExcelHelpers.ReadData(1, "URL");
+            }
+            catch(Exception e)
+            {
+                this.url = Settings.URL;
+            }
             
             DriverContext.Browser.GoToUrl(url);
             LogHelpers.Write("Navigated to: " + url);

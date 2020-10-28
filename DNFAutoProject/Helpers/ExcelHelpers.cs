@@ -68,13 +68,13 @@
             }
             catch(Exception e)
             {
-                return null;
+                throw new Exception(string.Format("Something went wrong getting your data"));
             }
         }
     }
 
     public class DataCollection
-    // get value by row number and column name
+    // get value by row number and column nameS
     {
         public int rowNumber { get; set; }
         public string colName { get; set; }

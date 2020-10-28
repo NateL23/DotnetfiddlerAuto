@@ -1,4 +1,5 @@
 ﻿using DNFAutoFramework.Base;
+using DNFAutoFramework.Helpers;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Support.UI;
@@ -34,15 +35,18 @@ namespace DNFAutoFramework.Extensions
             Actions actions = new Actions(DriverContext.Driver);
             actions.MoveToElement(element).Perform();
         }
-
-
         // assert element is present on the webpage
-        public static void AssertElementPresent(this IWebElement element)
+        public static bool AssertElementNotPresent(this IWebElement element)
         {
-            if(!IsElementPresent(element))
+            if (!IsElementPresent(element))
             {
-                throw new Exception(string.Format("Err: Assert Element Text failed"));
-            };
+                LogHelpers.Write("Assert Element Not Present - Pass!!");
+                return true;
+            }
+            else
+            {
+                throw new Exception(string.Format("Err: AssertElementNotPresent Failed!"));
+            }
         }
         // return true if element is displayedon the webpage
         private static bool IsElementPresent(IWebElement element)
