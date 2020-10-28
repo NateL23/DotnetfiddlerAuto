@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<DNFAutoFramework>
+	<RunSettings>
+		<!--url for test site-->
+		<URL>https://dotnetfiddle.net/</URL>
+		<!--possible flags: Chrome-->
+		<Browser>Chrome</Browser>
+		<!--possible flags: TechnicalAssesment-->
+		<TestType>TechnicalAssesment</TestType>
+		<!--possible flags: Y, N-->
+		<IsLog>Y</IsLog>
+		<!--filepath to write log files to-->
+		<LogPath>C:\\DotnetfiddleFramework\\NateLeMayAssessmentlogs\\</LogPath>
+		<!--Nate LeMay - QA Engineer-->
+		<BuildName>NateLeMay</BuildName>
+		<!--possible flags: Y, N-->
+		<IsReport>N</IsReport>
+		<!--Company username-->
+		<UserName>IHSMarkit</UserName>
+		<!--Selenium .NET/C#-->
+		<Technology>Selenium</Technology>
+	</RunSettings>
+</DNFAutoFramework>
