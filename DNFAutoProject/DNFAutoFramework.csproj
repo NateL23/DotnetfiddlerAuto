@@ -64,6 +64,7 @@
     <Compile Include="Base\DriverContext.cs" />
     <Compile Include="Config\ConfigReader.cs" />
     <Compile Include="Config\Settings.cs" />
+    <Compile Include="Extensions\WebDriverExtensions.cs" />
     <Compile Include="Extensions\WebElementExtensions.cs" />
     <Compile Include="Helpers\ExcelHelpers.cs" />
     <Compile Include="Helpers\LogHelpers.cs" />

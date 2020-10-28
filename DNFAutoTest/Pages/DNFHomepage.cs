@@ -1,5 +1,6 @@
 ﻿namespace DNFAutoTest.Pages
 {
+    using DNFAutoFramework.Base;
     using DNFAutoFramework.Extensions;
     using OpenQA.Selenium;
     using OpenQA.Selenium.Support.PageObjects;
@@ -18,6 +19,8 @@
         // click the run button
         public void ClickRun()
         {
+            // waits at least 2s for the page to load before clicking 
+            DriverContext.Driver.WaitForPageLoad(2000);
             this.runButton.Click();
         }
 
