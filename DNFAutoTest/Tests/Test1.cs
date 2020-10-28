@@ -12,14 +12,15 @@
     {
         private string url = null;
         
-        // grabs the XLSX filename from the app.config
+        // grabs the XLSX filename and logs path from the app.config
         static string fileName = ConfigReader.InitializeTest();
-        
+        static string dir = @ConfigReader.InitializeLogs().ToString();
+
         // select which browser selenium will use
         // default set to chrome
         public void OpenBrowser(BrowserType browserType = BrowserType.Chrome)
         {
-            LogHelpers.CreateLogFile();
+            LogHelpers.CreateLogFile(dir);
             ExcelHelpers.PopulateInCollection(fileName);
             
             // reads in URL from the .xslx file in ExcelData folder
